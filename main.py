@@ -15,17 +15,18 @@ elif grau == 2:
     elif valorA != 0:
         valorB = float(input("Digite o valor de b"))
         valorC = float(input("Digite o valor de c"))
-        if valorB**2 - 4*valorA*valorC < 0:
+        delta = valorB**2 - 4*valorA*valorC
+        if delta < 0:
             print("A equação não possui raízes reais")
-        elif valorB**2 - 4*valorA*valorC == 0:
+        elif delta == 0:
             print("A equação possui apenas uma raiz real")
-            print(f"o valor da raiz é {-valorB/2:.2f}")
-        elif valorB**2 - 4*valorA*valorC > 0:
+            print(f"o valor da raiz é {-valorB/(2*valorA):.2f}")
+        elif delta > 0:
             print("A equação possui duas raízes reais")
-            resposta = valorB**2 - 4*valorA*valorC
+            resposta = delta
             resposta = resposta**0.5
-            resposta2 = -valorB + resposta
-            resposta3 = -valorB - resposta
+            resposta2 = (-valorB + resposta)/(2*valorA)
+            resposta3 = (-valorB - resposta)/(2*valorA)
             print(f"o valor de x1 é {resposta2:.2f}")
             print(f"o valor de x2 é {resposta3:.2f}")
 else:
