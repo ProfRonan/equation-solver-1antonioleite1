@@ -19,7 +19,7 @@ elif grau == 2:
         if delta < 0:
             print("A equação não possui raízes reais")
         elif delta == 0:
-            print("A equação possui apenas uma raiz real")
+            print("A equação possui uma raiz real")
             print(f"o valor da raiz é {-valorB/(2*valorA):.2f}")
         elif delta > 0:
             print("A equação possui duas raízes reais")
